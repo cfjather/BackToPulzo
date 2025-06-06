@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>¡Obtén tu Token!</h2>
+  <button (click)="getToken()">Generar Token</button>
+
+  <div *ngIf="token" class="token-display">
+    <p><strong>Este es tu Token:</strong></p>
+    <p class="token-box">
+      {{ token }}
+    </p>
+    <button (click)="copyToken()">Copiar Token</button>
+    <span *ngIf="copied" class="copied-msg">¡Copiado!</span>
+  </div>
+</div>

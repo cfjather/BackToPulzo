@@ -1,0 +1,51 @@
+<div class="container">
+  <h2>¡Conoce los Personajes Rick and Morty!</h2>
+  <h4>A continuacion, ingresa tu Token y toca en 'Obtener Personajes'</h4>
+
+  <div>
+    <input [(ngModel)]="token" placeholder="Ingresa tu Token" />
+    <button (click)="fetchCharacters()">Obtener Personajes</button>
+    <br />
+  </div>
+
+  <div *ngIf="usesLeft !== null">
+    <p>Usos Restantes del Token: {{ usesLeft }}</p>
+  </div>
+
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+
+<br />
+ <table *ngIf="characters && characters.length > 0; else loading">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Estado</th>
+      <th>Ubicación</th>
+      <th>Especie</th>
+      <th>Origen</th>
+      <th>Genero</th>
+      <th>Imagen</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let char of characters">
+        <td data-label="Nombre">{{ char.name }}</td>
+        <td data-label="Estado">{{ char.status }}</td>
+        <td data-label="Ubicación">{{ char.location.name }}</td>
+        <td data-label="Especie">{{ char.species }}</td>
+        <td data-label="Origen">{{ char.origin.name }}</td>
+        <td data-label="Género">{{ char.gender }}</td>
+        <td data-label="Imagen">
+          <img [src]="char.image" alt="{{ char.name }}" />
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+  <ng-template #loading>
+    <p *ngIf="!error">Esperando Token...</p>
+  </ng-template>
+</div>

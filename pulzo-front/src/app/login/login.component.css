@@ -1,0 +1,16 @@
+.token-display {
+  margin-top: 20px;
+}
+
+.token-box {
+  user-select: all;
+  font-family: monospace;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.copied-msg {
+  color: green;
+  margin-left: 10px;
+}

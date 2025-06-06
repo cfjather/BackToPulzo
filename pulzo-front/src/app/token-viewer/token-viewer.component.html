@@ -1,0 +1,27 @@
+<div>
+  <h2>Tokens Activos</h2>
+
+  <div *ngIf="error" style="color: red;">{{ error }}</div>
+
+  <table style="width: 100%; table-layout: fixed; border-collapse: collapse;" *ngIf="tokens.length > 0" border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th style="width: 90%;">Token</th>
+        <th style="width: 10%;">Usos restantes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of tokens">
+        <td style="word-break: break-word;">{{ t.token }}</td>
+        <td>{{ t.usesLeft }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+    <br>
+  <button (click)="loadTokens()">Actualizar</button>
+
+  <div *ngIf="tokens.length === 0 && !error">
+    No hay tokens activos.
+  </div>
+</div>

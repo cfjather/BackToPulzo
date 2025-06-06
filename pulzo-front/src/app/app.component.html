@@ -1,0 +1,13 @@
+<!-- Barra de Navegacion-->
+
+<nav>
+  <div class="left">
+    <a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Generador de Tokens</a>
+    <a routerLink="/characters" routerLinkActive="active">Visor de Personajes</a>
+  </div>
+  <div class="right">
+    <a routerLink="/admin" routerLinkActive="active">Administrador de Tokens</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

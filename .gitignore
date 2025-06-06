@@ -1,0 +1,13 @@
+# Node modules
+pulzo-front/node_modules/
+
+# IDE/editor files
+pulzo-front/.vscode/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# GO
+pulzo-back/go.sum

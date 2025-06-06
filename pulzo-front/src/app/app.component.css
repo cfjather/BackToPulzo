@@ -1,0 +1,26 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3c00a3;
+  padding: 10px;
+}
+nav .left, nav .right {
+  display: flex;
+}
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+nav a.active {
+  text-decoration: underline;
+}
+    section {
+      display: none;
+      margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
