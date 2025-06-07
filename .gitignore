@@ -10,4 +10,4 @@ pulzo-front/.vscode/
 Thumbs.db
 
 # GO
-pulzo-back/go.sum
+#pulzo-back/go.sum
