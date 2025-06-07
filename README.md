@@ -43,19 +43,49 @@ Este proyecto es una aplicación con Backend (GO), y Frontend (Angular) que perm
 ## Cómo ejecutar el proyecto
 
 1. Clona el repositorio.
-2. Instala las dependencias (npm install & choco install go (o descarga GO desde https://go.dev/)).
-3. Inicia el Backend con GO (go run main.go) y el Frontend (ng serve -o).
+2. Instala las dependencias  
+
+### Opcion No. 1: Instalacion Manual
+
+3. Instala las dependencias manualmente
+   - Para el frontend (Angular):  
+     ```bash
+     npm install
+     ```  
+   - Para el backend (Go):  
+     Instala Go desde [https://go.dev/](https://go.dev/) o usa Chocolatey:  
+     ```bash
+     choco install golang
+     ```  
+3. Inicia el backend y el frontend manualmente:  
+   - Backend:  
+     ```bash
+     go run main.go
+     ```  
+   - Frontend:  
+     ```bash
+     ng serve -o
+     ```  
+
+### Opcion No. 2: Docker
+2. Asegúrate de tener Docker instalado.  
+3. Desde la raíz del proyecto, ejecuta:
+
+```bash
+docker compose up --build
+```
 
 Puedes usarlo desde LocalHost, o via POSTMAN.
 
 ### Via LocalHost
-4. Abre el servidor LocalHost.
-5. Para obtener un Token, selecciona 'Generador de Tokens' en la barra de navegacion.
-6. Toca 'Copiar Token' o manualmente, copialo.
-7. Dirigete a 'Visor de Personajes' en la barra de navegacion.
-8. Pega el Token en el Campo 'Ingresa tu Token' y toca en 'Obtener Personajes'. Listo!
-9. Si deseas ver los Tokens existentes, dirigete a 'Administrador de Tokens' en la barra de navegacion.
-10. Podras ver los tokens disponibles y sus usos restantes.
+4. Abre el servidor en tu navegador.
+5. Para obtener un token, selecciona **Generador de Tokens** en la barra de navegación.  
+6. Toca **Copiar Token** o cópialo manualmente.  
+7. Ve a **Visor de Personajes**.  
+8. Pega el token en el campo **Ingresa tu Token** y toca en **Obtener Personajes**. ¡Listo!  
+9. Si deseas ver los tokens existentes, dirígete a **Administrador de Tokens**.  
+10. Verás los tokens disponibles y sus usos restantes.  
+
 
 ### Via PostMan (Generacion de Tokens y Consulta de Personajes)
 4. Configura el metodo en POST.
