@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: ./pulzo-back
+    container_name: pulzo-back
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./pulzo-back/.env
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./pulzo-front
+    container_name: pulzo-front
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
